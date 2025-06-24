@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계좌 복사 완료</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        p {
+            margin: 5px 0 20px;
+            color: #333;
+            font-size: 16px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+        .bank-btn {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            background-color: #ffffff;
+            cursor: pointer;
+            font-size: 15px;
+            text-decoration: none;
+            color: #222;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .bank-btn:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <script>
+        function openApp(appUrl, fallbackUrl) {
+            window.location.href = appUrl;
+            setTimeout(function() {
+                window.location.href = fallbackUrl;
+            }, 1000);
+        }
+        window.onload = function() {
+            navigator.clipboard.writeText("46791049154207");
+        }
+    </script>
+</head>
+<body>
+    <h2>계좌번호가 복사되었어요</h2>
+    <p>(예금주: 정진숙)</p>
+    <p>은행을 선택해 주세요</p>
+
+    <div class="grid">
+        <a class="bank-btn" href="#" onclick="openApp('kb-starbanking://', 'https://play.google.com/store/apps/details?id=com.kbstar.kbbank')">국민은행</a>
+        <a class="bank-btn" href="#" onclick="openApp('wooribank://', 'https://play.google.com/store/apps/details?id=com.wooribank.smart.npib')">우리은행</a>
+        <a class="bank-btn" href="#" onclick="openApp('shinhan-sbank://', 'https://play.google.com/store/apps/details?id=com.shinhan.sbanking')">신한은행</a>
+        <a class="bank-btn" href="#" onclick="openApp('nonghyupbank://', 'https://play.google.com/store/apps/details?id=nh.smart')">농협은행</a>
+        <a class="bank-btn" href="#" onclick="openApp('hana1q://', 'https://play.google.com/store/apps/details?id=com.hanabank.ebk.channel.android.hananbank')">하나은행</a>
+        <a class="bank-btn" href="#" onclick="openApp('ibk-bank://', 'https://play.google.com/store/apps/details?id=com.ibk.neobanking')">기업은행</a>
+        <a class="bank-btn" href="#" onclick="openApp('kakaobank://', 'https://play.google.com/store/apps/details?id=com.kakaobank.channel')">카카오뱅크</a>
+        <a class="bank-btn" href="#" onclick="openApp('toss://', 'https://play.google.com/store/apps/details?id=viva.republica.toss')">토스</a>
+        <a class="bank-btn" href="#" onclick="openApp('kbankbank://', 'https://play.google.com/store/apps/details?id=com.kbankwith.smartbank')">케이뱅크</a>
+        <a class="bank-btn" href="#" onclick="openApp('im-bank://', 'https://play.google.com/store/apps/details?id=kr.co.msafer')">iM뱅크</a>
+    </div>
+</body>
+</html>
