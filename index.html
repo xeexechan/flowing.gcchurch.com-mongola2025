@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>계좌 복사 완료</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 5px 0 20px;
+            color: #555;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .bank-btn {
+            padding: 14px;
+            border: 1px solid #bbb;
+            border-radius: 10px;
+            background-color: #f7f7f7;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            color: black;
+        }
+        .bank-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h2>계좌번호가 복사되었어요.</h2>
+    <p>은행을 선택해 주세요.<br>(예금주: 정진숙)</p>
+
+    <div class="grid">
+        <a class="bank-btn" href="kb-starbanking://">국민은행</a>
+        <a class="bank-btn" href="wooribank://">우리은행</a>
+        <a class="bank-btn" href="shinhan-sbank://">신한은행</a>
+        <a class="bank-btn" href="nonghyupbank://">농협은행</a>
+        <a class="bank-btn" href="hana1q://">하나은행</a>
+        <a class="bank-btn" href="ibk-bank://">기업은행</a>
+        <a class="bank-btn" href="kakaobank://">카카오뱅크</a>
+        <a class="bank-btn" href="toss://">토스뱅크</a>
+        <a class="bank-btn" href="kbankbank://">케이뱅크</a>
+        <a class="bank-btn" href="im-bank://">iM뱅크</a>
+    </div>
+
+    <script>
+        // 계좌번호 복사
+        navigator.clipboard.writeText("46791049154207");
+    </script>
+</body>
+</html>
